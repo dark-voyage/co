@@ -36,7 +36,7 @@ static NSString *const kTelegramApiBaseUrl = @"https://api.telegram.org/bot";
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSArray *updates = json[@"result"];
     for (NSDictionary *update in updates) {
-      _lastUpdateId = [update[@"update_id"] integerValue];
+        self->_lastUpdateId = [update[@"update_id"] integerValue];
       NSDictionary *message = update[@"message"];
       NSString *chatID = [NSString stringWithFormat:@"%@", message[@"chat"][@"id"]];
       NSString *text = message[@"text"];

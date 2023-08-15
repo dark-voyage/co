@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1BA7222A8BB6110078FB0D /* telegram.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1BA7212A8BB6110078FB0D /* telegram.m */; };
 		3B5E25FA2A8B8ED100B1A5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E25F92A8B8ED100B1A5FA /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B1BA7202A8BB6110078FB0D /* telegram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = telegram.h; sourceTree = "<group>"; };
+		3B1BA7212A8BB6110078FB0D /* telegram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = telegram.m; sourceTree = "<group>"; };
 		3B5E25F62A8B8ED100B1A5FA /* experiment */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = experiment; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B5E25F92A8B8ED100B1A5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				3B5E25F92A8B8ED100B1A5FA /* main.m */,
+				3B1BA7202A8BB6110078FB0D /* telegram.h */,
+				3B1BA7212A8BB6110078FB0D /* telegram.m */,
 			);
 			path = experiment;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1BA7222A8BB6110078FB0D /* telegram.m in Sources */,
 				3B5E25FA2A8B8ED100B1A5FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
