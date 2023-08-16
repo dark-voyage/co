@@ -29,20 +29,20 @@ include_directories(experiment)
 
 # Add executables
 add_executable(experiment
-    experiment/main.m
+        experiment/main.m
         experiment/telegram.m
         experiment/telegram.h)
 target_link_libraries(experiment "-framework Foundation")
 
 # Set the properties for the target
 set_target_properties(experiment PROPERTIES
-  COMPILE_FLAGS "${CMAKE_OBJC_FLAGS}"
-  LINK_FLAGS "${OBJC_FRAMEWORKS}"
+        COMPILE_FLAGS "${CMAKE_OBJC_FLAGS}"
+        LINK_FLAGS "${OBJC_FRAMEWORKS}"
 )
 
 # Add a custom target to run the executable
 add_custom_target(run
-  COMMAND experiment
-  DEPENDS experiment
-  USES_TERMINAL
+        COMMAND experiment
+        DEPENDS experiment
+        USES_TERMINAL
 )
