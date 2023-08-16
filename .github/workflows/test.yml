@@ -1,4 +1,4 @@
-name: Test CI/CD
+name: Test CI / CD
 
 on:
   push:
@@ -24,9 +24,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-      - name: Install cmake
-        run: brew install cmake
 
       - name: Build
         run: |
