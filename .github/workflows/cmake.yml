@@ -1,0 +1,38 @@
+name: Test (CMake)
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-cmake:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # - name: Upgrade dependencies
+      #   run: brew update && brew upgrade
+
+      - name: Install cmake
+        run: brew install cmake
+
+      - name: Build
+        run: cmake -S . -B build && cmake --build build
+
+  build-xcode:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # - name: Upgrade dependencies
+      #   run: brew update && brew upgrade
+
+      - name: Install cmake
+        run: brew install cmake
+
+      - name: Build
+        run: cmake -S . -B build -G Xcode && cmake --build build --config Release
