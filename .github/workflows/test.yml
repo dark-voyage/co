@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build-cmake:
+  build:
     runs-on: macos-latest
 
     steps:
@@ -19,12 +19,12 @@ jobs:
       - name: Build
         run: cmake -S . -B build && cmake --build build
 
-  build-xcode:
-    runs-on: macos-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Build
-        run: |
-          xcodebuild -project experiment.xcodeproj -scheme experiment -configuration Release build
+#  build-xcode:
+#    runs-on: macos-latest
+#
+#    steps:
+#      - uses: actions/checkout@v2
+#
+#      - name: Build
+#        run: |
+#          xcodebuild -project experiment.xcodeproj -scheme experiment -configuration Release build
