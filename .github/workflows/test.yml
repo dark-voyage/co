@@ -30,4 +30,4 @@ jobs:
 
       - name: Build
         run: |
-          xcodebuild -project experiment.xcodeproj -scheme experiment -configuration Release build
+          xcodebuild -project experiment.xcodeproj -scheme experiment -configuration Release build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
