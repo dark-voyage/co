@@ -1,4 +1,4 @@
-name: Test (CMake)
+name: Test CI/CD
 
 on:
   push:
@@ -13,9 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Upgrade dependencies
-      #   run: brew update && brew upgrade
-
       - name: Install cmake
         run: brew install cmake
 
@@ -28,11 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # - name: Upgrade dependencies
-      #   run: brew update && brew upgrade
-
       - name: Install cmake
         run: brew install cmake
 
       - name: Build
-        run: cmake -S . -B build -G Xcode && cmake --build build --config Release
+        run: |
+          xcodebuild -project experiment.xcodeproj -scheme experiment -configuration Release build
